@@ -12,9 +12,8 @@ class RadioTest {
     @Test
     void constructorTest(){
         Radio radio2 = new Radio(20);
-        radio2.setCurrentChannel(19);
-        radio2.switchChannelUp();
-        assertEquals(20,radio2.getCurrentChannel());
+        radio2.setCurrentChannel(11);
+        assertEquals(0,radio2.getCurrentChannel());
     }
 
     @Test

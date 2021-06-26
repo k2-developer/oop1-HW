@@ -5,9 +5,12 @@ public class Radio {
     private static final int MAX_VOLUME = 100;
     private static final int MIN_CHANNEL = 0;
 
-    int currentChannel;
-    int currentVolume;
-    private int totalChannels;
+    private int currentChannel;
+    private int currentVolume;
+    private int maxChannel;
+
+    int totalChannels = maxChannel;
+
 
     public Radio() {
         this(10);
@@ -22,7 +25,7 @@ public class Radio {
     }
 
     public int getNumberChannelMax() {
-        return totalChannels;
+        return maxChannel;
     }
 
     public int getVolumeLevelMin() {
@@ -38,8 +41,8 @@ public class Radio {
     }
 
     public void setCurrentChannel(int currentChannel) {
-        if (currentChannel > totalChannels) {
-            this.currentChannel = totalChannels;
+        if (currentChannel > maxChannel) {
+            this.currentChannel = maxChannel;
             return;
         }
         if (currentChannel < MIN_CHANNEL) {
@@ -64,7 +67,7 @@ public class Radio {
     }
 
     public void switchChannelUp() {
-        if (currentChannel >= totalChannels) {
+        if (currentChannel >= maxChannel) {
             setCurrentChannel(MIN_CHANNEL);
         } else {
             setCurrentChannel(currentChannel + 1);
@@ -73,7 +76,7 @@ public class Radio {
 
     public void switchChannelDown() {
         if (currentChannel <= MIN_CHANNEL) {
-            setCurrentChannel(totalChannels);
+            setCurrentChannel(maxChannel);
         } else {
             setCurrentChannel(currentChannel - 1);
         }
