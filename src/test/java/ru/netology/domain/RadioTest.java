@@ -18,7 +18,7 @@ class RadioTest {
 
     @Test
     void getNumberChannelMax() {
-        assertEquals(10, radio.getNumberChannelMax());
+        assertEquals(9, radio.getNumberChannelMax());
     }
 
     @Test

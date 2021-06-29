@@ -7,18 +7,19 @@ public class Radio {
 
     private int currentChannel;
     private int currentVolume;
-    private final int maxChannel;
 
     int totalChannels;
+    int maxChannel;
 
 
     public Radio() {
         this(10);
+        maxChannel = this.totalChannels - 1;
     }
 
     public Radio(int totalChannels) {
         this.totalChannels = totalChannels;
-        maxChannel = totalChannels;
+        maxChannel = this.totalChannels - 1;
     }
 
     public int getNumberChannelMin() {
