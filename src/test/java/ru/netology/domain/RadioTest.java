@@ -12,14 +12,13 @@ class RadioTest {
     @Test
     void constructorTest(){
         Radio radio2 = new Radio(20);
-        radio2.setCurrentChannel(19);
-        radio2.switchChannelUp();
-        assertEquals(20,radio2.getCurrentChannel());
+        radio2.setCurrentChannel(11);
+        assertEquals(11,radio2.getCurrentChannel());
     }
 
     @Test
     void getNumberChannelMax() {
-        assertEquals(10, radio.getNumberChannelMax());
+        assertEquals(9, radio.getNumberChannelMax());
     }
 
     @Test
