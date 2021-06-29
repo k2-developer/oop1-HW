@@ -13,7 +13,7 @@ class RadioTest {
     void constructorTest(){
         Radio radio2 = new Radio(20);
         radio2.setCurrentChannel(11);
-        assertEquals(0,radio2.getCurrentChannel());
+        assertEquals(11,radio2.getCurrentChannel());
     }
 
     @Test
